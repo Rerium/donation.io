@@ -7,11 +7,37 @@
     <title>donation</title>
 </head>
 <body bgcolor="#f5f5dc">
-<div class="yandex"><iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9D%D0%B0%20%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8&targets-hint=%D0%9D%D0%B0%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%3F&default-sum=&button-text=14&payment-type-choice=on&mobile-payment-type-choice=on&comment=on&hint=&successURL=&quickpay=shop&account=410013774181853" width="100%" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe></div>
+<div class="yandex" align="center"><iframe src="https://yoomoney.ru/quickpay/shop-widget?writer=seller&targets=%D0%9D%D0%B0%20%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8&targets-hint=%D0%9D%D0%B0%20%D0%BA%D0%B0%D0%BA%D0%B8%D0%B5%20%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D1%8C%D0%BA%D0%B8%3F&default-sum=&button-text=14&payment-type-choice=on&mobile-payment-type-choice=on&comment=on&hint=&successURL=&quickpay=shop&account=410013774181853" width="80%" align="center" height="307" frameborder="0" allowtransparency="true" scrolling="no"></iframe></div>
 <div class="card">
- <p align="center"> <tt id="sber">2200201302489988</tt> Сбербанк
- <p align="center"> <tt id="sber">5273490024861009</tt> Почта Банк (ВТБ)
-</div>
+Номера карт
+ <p align="center"> <tt id="sber">2200 2013 0248 9988</tt> Сбербанк <button id="copySber">Копировать/Copy</button>
+ <p align="center"> <tt id="pochta">5273 4900 2486 1009</tt> Почта Банк (ВТБ) <button id="copyPotcha">Копировать/Copy</button>
+ 
 
+
+<script>
+var sbtn = document.getElementById("copySber");
+var pbtn = document.getElementById("copyPotcha");
+function copyF(txt){
+
+navigator.clipboard.writeText(txt).then(function() {
+  /* clipboard successfully set */
+}, function() {
+  console.log('Something went wrong', err);
+});
+
+}
+sbtn.onclick = function() {
+let text = document.getElementById("sber");
+text = text.lastChild.data
+copyF(text);
+
+}
+pbtn.onclick = function() {
+let text = document.getElementById("pochta");
+text = text.lastChild.data
+copyF(text);
+}
+</script>
 </body>
  
