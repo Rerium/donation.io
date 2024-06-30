@@ -137,9 +137,7 @@
 <div class="bank">
   <div class="lable"><p>Номера карт</p></div>
   <div>
-    <div class="card"><p><tt id="sber"></tt> Сбербанк</p><button id="copySber">Копировать/Copy</button></div>
-    <div class="card"><p><tt id="pochta"></tt> Почта Банк</p><button id="copyPotcha">Копировать/Copy</button></div>
-    <div class="card"><p><tt id="vtb"></tt> ВТБ</p><button id="copyVTB">Копировать/Copy</button></div>
+    <div class="card"><p><tt id="sber">2202205043708947</tt> Сбербанк</p><button id="copySber">Копировать/Copy</button></div>
   </div>
 </div>
 <div class="noty">
@@ -148,7 +146,6 @@
 </div>  
 <script>
 var sbtn = document.getElementById("copySber");
-var pbtn = document.getElementById("copyPotcha");
 var vbtn = document.getElementById("copyVTB");
 let noty = document.querySelector('.noty');
 noty.addEventListener("animationend", AnimationHandler, false);
@@ -166,18 +163,6 @@ navigator.clipboard.writeText(txt).then(function() {
 
 sbtn.onclick = function() {
 let text = document.getElementById("sber");
-text = text.lastChild.data
-copyF(text);
-noty.classList.add('animation');
-}
-pbtn.onclick = function() {
-let text = document.getElementById("pochta");
-text = text.lastChild.data
-copyF(text);
-noty.classList.add('animation');
-}
-vbtn.onclick = function() {
-let text = document.getElementById("vtb");
 text = text.lastChild.data
 copyF(text);
 noty.classList.add('animation');
